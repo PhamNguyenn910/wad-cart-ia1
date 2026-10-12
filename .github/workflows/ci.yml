@@ -1,0 +1,38 @@
+
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    name: Validate cart project
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Check JavaScript syntax
+        run: |
+          node --check src/cart.js
+          node --check test/cart.test.js
+          node --check scripts/check-format.js
+
+      - name: Check code formatting
+        run: npm run format
+
+      - name: Run unit tests
+        run: npm test

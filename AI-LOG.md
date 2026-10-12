@@ -1,10 +1,10 @@
 # IA#1 — AI Usage Log
 
-**Date:** 2026-10-12 
+**Date:** 2026-10-12
 
-**AI Tool:** ChatGPT (Web)  
+**AI Tool:** ChatGPT (Web)
 
-**Project:** CSC13008 — cartTotal with a Harness  
+**Project:** CSC13008 — cartTotal with a Harness
 
 **Repository:** https://github.com/PhamNguyenn910/wad-cart-ia1
 

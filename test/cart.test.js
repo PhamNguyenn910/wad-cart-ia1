@@ -84,4 +84,3 @@ test('total is returned as a number', () => {
   const items = [{ price: 100, qty: 1 }]
   assert.equal(typeof cartTotal(items, options), 'number')
 })
-git diff -- src/cart.js
